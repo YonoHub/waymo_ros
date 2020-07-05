@@ -1,0 +1,26 @@
+<launch>
+    <param name="DatasetPath" value="/MyTeams/YonohubBlocksRadwan/Waymo/WaymoDataset/training_0000/segment-10017090168044687777_6380_000_6400_000_with_camera_labels.tfrecord" /> <!-- /path/to/file.tfrecord -->
+    <param name="CamF_pub" value="True" /> <!-- Publish Front Camera Images -->
+    <param name="CamFL_pub" value="True" /> <!-- Publish Front Left Camera Images -->
+    <param name="CamSL_pub" value="True" /> <!-- Publish Side Left Camera Images -->
+    <param name="CamFR_pub" value="True" /> <!-- Publish Front Right Camera Images -->
+    <param name="CamSR_pub" value="True" /> <!-- Publish Side Right Camera Images -->
+    
+    <param name="bboxes_pub" value="True" /> <!-- Publish 2D bounding boxes (Cameras) -->
+    
+    <param name="LidF_pub" value="True" /> <!-- Publish Front Lidar PointCloud -->
+    <param name="LidR_pub" value="True" /> <!-- Publish Back Lidar PointCloud -->
+    <param name="LidSL_pub" value="True" /> <!-- Publish Side Left Lidar PointCloud -->
+    <param name="LidSR_pub" value="True" /> <!-- Publish Side Right Lidar PointCloud -->
+    <param name="LidT_pub" value="True" /> <!-- Publish Top Lidar PointCloud -->
+    
+    <param name="bboxes3d_pub" value="True" /> <!-- Publish 3D bounding boxes (Lidar) -->
+    
+    <param name="frequency" value="10" /> <!-- Desired Publishing Frequency -->
+    <param name="Repeat" value="True" /> <!-- Looping Over Data -->
+    
+    
+    <node name="waymo_player" pkg="waymo_ros" type="waymo_rospy.py" output="screen"/>
+
+
+</launch>
